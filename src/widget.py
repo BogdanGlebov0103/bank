@@ -27,6 +27,16 @@ def get_date(data):
     return month_day.strftime('%d.%m.%Y')
 
 
+if __name__ == '__main__':
+
+    x = ['MasterCard 7158300734726758',
+         'Счет 64686473678894779589',
+         'Visa Classic 6831982476737658',
+         '']
+    data = "2024-03-11T02:26:18.671407"
+
+    print(mask_account_card(x[3]))
+    print(get_date(data))
 
 
 
