@@ -27,6 +27,7 @@ def get_date(data):
     return month_day.strftime('%d.%m.%Y')
 
 
+
 if __name__ == '__main__':
 
     x = ['MasterCard 7158300734726758',
@@ -37,6 +38,8 @@ if __name__ == '__main__':
 
     print(mask_account_card(x[3]))
     print(get_date(data))
+
+
 
 
 
