@@ -1,7 +1,10 @@
 from datetime import datetime
 from src.masks import get_mask_account, get_mask_card_number
 
-def mask_account_card(name_number_card):
+def mask_account_card(name_number_card: str) -> list:
+    '''
+    маскирует номер карты и номер счета
+    '''
     while name_number_card == '':
         name_number_card = input('Введите номер счета или карты')
     name_split = name_number_card.split()
@@ -22,14 +25,15 @@ def mask_account_card(name_number_card):
     return ' '.join(new_list)
 
 
-def get_date(data):
+def get_date(data: str) -> str:
+    '''
+    возвращает дату операции в установленном формате
+    '''
     month_day = datetime.fromisoformat(data)
     return month_day.strftime('%d.%m.%Y')
 
 
-
 if __name__ == '__main__':
-
     x = ['MasterCard 7158300734726758',
          'Счет 64686473678894779589',
          'Visa Classic 6831982476737658',
@@ -38,15 +42,3 @@ if __name__ == '__main__':
 
     print(mask_account_card(x[3]))
     print(get_date(data))
-
-
-
-
-
-
-
-
-
-
-
-
